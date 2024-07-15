@@ -11,8 +11,16 @@ const Dashboard: React.FC = () => {
     const dispatch = useAppDispatch();
 
     useEffect(() => {
-        dispatch({ type: FETCH_TOP_STOCKS_REQUEST });
-        console.log("Fetching top stocks");
+        const fetchStocks = () => {
+            console.log("running for every minute")
+            dispatch({ type: FETCH_TOP_STOCKS_REQUEST});
+        };
+
+        fetchStocks();
+
+        const intervalId = setInterval(fetchStocks, 60000);
+
+        return () => clearInterval(intervalId);
     }, [dispatch]);
 
     const navigateToStock = (symbol: string) => {
