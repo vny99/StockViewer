@@ -14,8 +14,8 @@ app.prepare().then(() => {
 
 
   cron.schedule('* * * * *', () => {
-    //fetchAndSaveStocks()
-    //deleteOldStock()
+    fetchAndSaveStocks()
+    deleteOldStock()
   });
 
 
