@@ -18,16 +18,16 @@ const StockModal: React.FC = () => {
 
     return (
         <div className={showModal ? 'modal' : 'hidden'} style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0, 0, 0, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <div className="modal-content" style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '5px', width: '80%', maxWidth: '500px' }}>
+            <div className="modal-content d-flex align-items-center" style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '5px', width: '80%', maxWidth: '330px' }}>
                 <h2>Select a Stock</h2>
-                <div className="stock-list">
+                <div className="stock-list d-flex flex-column">
                     {STOCKS.map(stock => (
-                        <button className='btn btn-success' key={stock} onClick={() => navigateToStock(stock)} style={{ margin: '10px', padding: '10px', width:"4.4rem" }}>
+                        <button className='btn btn-warning' key={stock} onClick={() => navigateToStock(stock)} style={{ margin: '10px', padding: '3px', width:"10rem", height:"40px" }}>
                             {stock}
                         </button>
                     ))}
                 </div>
-                <button className='btn btn-danger' onClick={handleClose} style={{ marginTop: '20px' }}>Close</button>
+                <button className='btn btn-danger' onClick={handleClose} style={{ marginTop: '20px', width:"15rem", height:"40px" }}>Close</button>
             </div>
         </div>
     );
