@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* CSS Variables for colors and fonts */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71; 
+  --background-color: white;
+  --font-color: #333; 
+  --font-family: serif;
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--background-color);
+  color: var(--font-color);
+  font-family: var(--font-family);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+table {
+  border-collapse: separate !important;
+  border-spacing: 0 10px !important;
+}
+
+thead tr {
+  border: none !important;
+}
+
+.listContent{
+  border-top: 1px solid #ccc !important;
+  border-bottom: 1px solid #ccc !important;
+  border-left: none !important;
+  border-right: none !important;
+
+}
+
+.headListContent{
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  font-weight: 300;
+
+}
+
+tr {
+  background-color: #fff; 
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+  transform: scale(1.01);
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr td, tr th {
+  background-color: inherit; 
+}

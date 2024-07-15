@@ -1,0 +1,1 @@
+export const STOCKS = ['AAPL', 'GOOGL', 'AMZN', 'MSFT', 'TSLA'];
